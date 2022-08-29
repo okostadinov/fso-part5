@@ -1,0 +1,9 @@
+POST http://localhost:3003/api/authors
+Content-Type: application/json
+
+{
+    "username": "okostadinov",
+    "name": "Oleg Kostadinov",
+    "password": "admin",
+    "blogs": []
+}
