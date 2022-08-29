@@ -93,8 +93,10 @@ describe('Blog App', () => {
       cy.addBlog(testBlog2);
       cy.get('.blog').eq(0).as('blogOne').contains('view').click();
       cy.get('.blog').eq(1).as('blogTwo').contains('view').click();
-      cy.get('@blogOne').contains('likes 10');
-      cy.get('@blogTwo').contains('likes 0');
+      cy.get('@blogOne').should('contain', 'likes 10');
+      cy.get('@blogTwo').should('contain', 'likes 0');
+      cy.get('@blogOne').get('.delete-btn').click();
+      cy.get('@blogTwo').get('.delete-btn').click();
     });
   });
 });
