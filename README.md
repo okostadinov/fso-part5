@@ -6,6 +6,10 @@ cd bloglist-frontend/
 npm run test
 ```
 
+### Note on FE Jest tests:
+By default one of the tests requires the button onClick event to be substituted with a mock function inside the React code.
+Once done the test passes. I have left it with the default functionality in stead of the test version.
+
 ## Running the Cypress tests:
 
 ### Run BE
